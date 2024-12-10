@@ -1,0 +1,86 @@
+.card
+  position: relative
+  display: flex
+  flex-direction: column
+  gap: 16px
+  align-items: flex-start
+
+  &__image
+    padding: 12px
+    background-color: var(--color-gray)
+    background-image: url('@/assets/images/box.svg')
+    background-repeat: no-repeat
+    background-position: center
+    background-size: 60px
+    min-height: 200px
+    position: relative
+    width: 100%
+    transition: background-size .3s
+
+    &:hover
+      background-size: 80px
+
+    &--sold-out
+      opacity: 0.5
+
+      &:hover
+        pointer-events: none
+        background-size: 60px
+
+  &__badge
+    z-index: 3
+
+    &--hit
+      padding: 8px
+      border-radius: 4px
+      background-color: var(--color-white)
+      border: 1px solid var(--scroll-bar)
+      display: flex
+      position: absolute
+
+      &::after
+        content: ''
+        width: 20px
+        height: 20px
+        background: url('@/assets/images/fire.svg') no-repeat center center
+        display: block
+
+    &--discount
+      padding: 6px 10px
+      font-weight: 700
+      color: var(--color-white)
+      background-color: var(--color-brand)
+      border-radius: 4px
+      position: absolute
+      bottom: 12px
+
+  &__price-block
+    display: flex
+    gap: 8px
+    align-items: center
+
+  &__old-price
+    text-decoration: line-through
+    font-size: var(--text-sm)
+    color: var(--color-font-second)
+
+  &__new-price
+    font-size: var(--text-md)
+    font-weight: 700
+    color: var(--color-font-main)
+
+  &__info
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &__brand
+    color: var(--color-font-second)
+
+  &__description
+    -webkit-line-clamp: 2
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    overflow: hidden
+
+

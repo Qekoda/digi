@@ -1,0 +1,45 @@
+.header
+  padding: 12px 0
+  display: flex
+  gap: 24px
+
+  &__left-part
+    display: flex
+    gap: 8px
+    align-items: center
+    
+    +media-mobile
+      display: none
+
+  &__logo
+    flex-grow: 2
+    padding: 12px 24px
+    gap: 8px
+    display: flex
+    align-items: center
+    
+  &__logo-img
+    flex-grow: 1
+    width: 24px
+    height: 24px
+
+  &__logo-text
+    color: var(--color-font-main)
+    font-size: var(--text-md)
+
+  &__search
+    flex-grow: 1
+
+  &__nav
+    display: flex
+    gap: 20px
+    align-items: center
+
+    +media-tablet
+      display: none
+
+    +media-mobile
+      display: none
+
+  &__link
+    color: var(--color-font-main)

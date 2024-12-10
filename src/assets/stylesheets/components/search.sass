@@ -1,0 +1,65 @@
+.search
+  display: flex
+  gap: 8px
+  align-items: center
+  cursor: pointer
+  border-radius: 4px
+  outline: 1px solid var(--color-border)
+  padding: 10px 12px
+
+  &:hover,
+  &:focus-within,
+  &:active
+    outline-color: var(--color-brand)
+
+  &__input
+    width: 100%
+    font-size: var(--text-md)
+    line-height: 1.5em
+
+  &__left-text
+    color: var(--color-font-second)
+    font-size: var(--text-sm)
+
+  &--header
+    padding: 12px 16px
+    outline: 1px solid var(--color-border-secondary)
+    border-radius: 10px
+
+    +media-mobile
+      gap: 0
+      padding: 8px 16px 8px 0px
+      margin-left: 32px
+      border-radius: 0
+      outline: 0
+      border-bottom: 1px solid var(--color-border)
+      transition: border-color .3s
+      
+      &:hover,
+      &:focus-within,
+      &:active
+        border-color: var(--color-brand)
+  
+  &__left-icon::before
+    content: ''
+    width: 20px
+    height: 20px
+    background-image: url('/src/assets/images/search.svg')
+    background-repeat: no-repeat
+    background-size: contain
+    background-position: center
+
+    +media-mobile
+      position: absolute
+      left: 2%
+      background-image: url('/src/assets/images/left-arrow.svg')
+
+  &__find-btn
+    display: none
+    
+    +media-mobile
+      display: block
+
+  &__clear-icon
+    +media-mobile
+      margin-right: 8px
