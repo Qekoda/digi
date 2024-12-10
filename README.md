@@ -1,16 +1,18 @@
 # Тестовое задание для компании Diginetica
 
-1. Написать функцию для получения списка всех артикулов товаров в консоли браузера на странице [Ссылка на страницу](https://groupprice.ru/categories/jenskaya-odejda?referer_from=main_catalog)
+### 1. Написать функцию для получения списка всех артикулов товаров в консоли браузера на странице [Ссылка на страницу](https://groupprice.ru/categories/jenskaya-odejda?referer_from=main_catalog)
 
 **Решение:**
 ```js
 let productList = document.querySelectorAll('._product')
 let result = Array.from(productList).map((product) => {
-	product.getAttribute('data-product-mini-card')
+	return product.getAttribute('data-product-mini-card')
 })
-```
 
-2. Написать функцию для получения всех характеристики товара в консоли браузера в виде объекта в формате attributeName: value на странице [Ссылка](https://nir-vanna.ru/product/smesitel-bravat-art-f175109c-dlya-rakoviny/)
+result//вывести результат
+```
+---
+### 2. Написать функцию для получения всех характеристики товара в консоли браузера в виде объекта в формате attributeName: value на странице [Ссылка на страницу](https://nir-vanna.ru/product/smesitel-bravat-art-f175109c-dlya-rakoviny/)
 
 **Решение:**
 ```js
@@ -25,15 +27,17 @@ const result = parametersArr.reduce((acc, param) => {
 	} else console.log(key, value)
 	return acc
 }, {})
-```
 
-3. Вёрстка
+result//вывести результат
+```
+---
+### 3. Вёрстка
 [Ссылка на макет](https://www.figma.com/file/uBaU2XAC6gZqtshk59mMHL)
 Задание: необходимо сверстать данный макет. 
 Оцениваться будет соответствие макету и модульность. 
 
 ## Зависимости
-v20.16.0
+node v20.16.0
 
 ## Установка
 
