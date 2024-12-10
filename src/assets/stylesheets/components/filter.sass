@@ -1,0 +1,43 @@
+.filter
+  display: flex
+  flex-direction: column
+  gap: 28px
+  min-width: 280px
+
+  +media-tablet
+    display: none
+    
+  +media-mobile
+    display: none
+
+  &__section
+    display: flex
+    flex-direction: column
+    gap: 16px
+
+  &__row
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 16px
+
+  &__title
+    font-size: var(--text-md)
+    color: var(--color-font-main)
+    font-weight: 700
+    text-align: center
+
+    &--space
+      display: flex
+      justify-content: space-between
+
+  &__clear
+    text-decoration: underline
+    color: var(--color-font-second)
+
+  &__stick
+    width: 20px
+    height: 1px
+    background-color: var(--color-border)
+
+  
